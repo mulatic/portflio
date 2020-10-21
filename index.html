@@ -644,17 +644,18 @@
   integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
   crossorigin="anonymous"></script>
     
-    <script>
-        $(".buttonAni").click(function(){
-            $(".toggleThis").toggle();
-                
-            if($(".toggleThis").is(":visible")){
-                    $(".buttonAni").text("Show Less >");
-            }
-            else{
-                $(".buttonAni").text("Show More >");
-            };
-        }); //click function
-    </script>
+  <script>
+   $(document).ready(function() {   
+    $(".buttonAni").click(function(){
+        $(".toggleThis").toggle();
+        if($(".toggleThis").is(":visible")){
+                $(".buttonAni").text("Show Less >");
+        }
+        else{
+            $(".buttonAni").text("Show More >");
+        };
+    });
+    }); //click function
+</script>
 </body>
 </html>
