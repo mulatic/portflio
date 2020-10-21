@@ -1,5 +1,3 @@
-
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +8,7 @@
 
 
     <link rel="stylesheet" href="..\styles\stylesheet-4.css">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -24,44 +22,41 @@
         }
         
         .container {
-            padding: 15px 25px;
+            padding: 20px 40px;
         }
         
         body {
             font-family: "Oswald", sans-serif;
         }
-        
-        body {
-            font-family: "Crimson Text", serif;
-        }
-        
-        a {
-            font-family: "Crimson Text";
-            font-size: 12pt;
-            font-weight: 600;
-            color: gray;
+                
+        .navigation-list a {
+            font-family: "Oswald";
+            font-size: 1.2em;
+            color: rgba(255, 255, 255, .85);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
             text-decoration: none;
-            letter-spacing: 5pt;
-        
             text-transform: lowercase;
         }
         
         h1 {
             font-family: "Oswald";
             font-weight: 600;
-            font-size: 76pt;
+            font-size: 3rem;
         }
         
         h2 {
             font-family: "Oswald";
             font-weight: 600;
-            font-size: 45pt;
+            font-size: 2rem;
         }
         
         h3 {
             font-family: "Oswald";
-            font-size: 16pt;
+            font-size: 0.9em;
             font-weight: 400;
+            padding: 5px;
+            text-align: center;
         }
         
         p {
@@ -71,8 +66,38 @@
         
         .big {
             font-size: 20pt;
+            margin-top: 5rem;
         }
         
+        .big2 {
+            font-size: 40px;
+            cursor: pointer;
+            
+        }
+
+        .big2 a:hover {
+            color: grey;
+        }
+        .pulsate {
+    -webkit-animation: pulsate 3s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.5;
+}
+@-webkit-keyframes pulsate {
+    0% { 
+        opacity: 0.5;
+    }
+    50% { 
+        opacity: 1.0;
+    }
+    100% { 
+        opacity: 0.5;
+    }
+}
+        a {
+            text-decoration: none;
+            color: black;
+        }
         span.overlay {
             font-weight: 400;
             font-size: 20pt;
@@ -88,64 +113,31 @@
         }
 
 
-        @media only screen and (max-width: 600px) {
-            h1 {
-                font-weight: 600;
-                font-size: 76pt;
-                line-height: 76pt;
-            }
         
-            h2 {
-                font-family: "Oswald";
-                font-weight: 600;
-                font-size: 54pt;
-                line-height: 54pt;
-            }
-        }
        
         /* DEFAULT CSS END */
         
         /* NAVIGATION CSS BEGIN */
         nav#navbar {
-            width: 100vw;
-            
+            width: 100%;
+            z-index: 2;
             position: fixed;
-            top: 0;
+            bottom: 0;
             left: 0;
         
             background-color: black;
         }
-        
-        nav#navbar >
-        div.container {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        div.logo-container >
-        img.logo-image {
-            max-height: 40px;
-        }
-        
+                
         div.navigation-container > 
         ul.navigation-list {
             display: flex;
             flex-direction: row;
+            justify-content: space-evenly;
         }
         
-        ul.navigation-list >
-        li.navigation-list {
-        list-style: none;
-        margin-left: 35px;
-        }
         /* NAVIGATION CSS END */
         
-        /* WELCOME SECTION CSS BEGIN */
-        section#welcome-section {
-            height: 100vh;
-        }
+        
         
         section#welcome-section >
         div.container {
@@ -161,7 +153,6 @@
         
         header#welcome-header {
             text-align: center;
-            display: inherit;
             flex-direction: inherit;
             justify-content: inherit;
             align-items: inherit;
@@ -174,19 +165,35 @@
                 margin-top: 15px
             }
         }
+
+        @media only screen and (min-width: 600px) and (max-width: 1024px) {
+            div.projects-wrapper {
+                margin-right: 75px;
+                margin-left: 75px; 
+                padding-top: 50px;           }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            div.projects-wrapper {
+                margin-right: 150px;
+                margin-left: 150px;
+            }
+        }
+        
+        @media only screen and (min-width: 600px) {
+            .big2 {
+               font-size: 60px;
+            }
+        }
         #self-photo {
-        border-radius: 100px;
-        justify-content: space-evenly;
-        
-        
-        }
-        
-        div.photo-header {
-        display: inline;
-        
+    border-radius: 100%;
+    width: 50%;
+    max-width: 200px;
+    margin-top: 0px;        
         
         }
-        /* WELCOME SECTION CSS END */
+        
+           /* WELCOME SECTION CSS END */
         
         /* PROJECTS SECTION CSS BEGIN */
         section#projects {
@@ -216,9 +223,7 @@
         }
         
         div.projects-wrapper {
-            margin: 50px 50px;
-        
-            display: flex;
+             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-evenly;
@@ -226,10 +231,9 @@
         }
         
         div.projects {
-            height: 475px;
-            width: 400px;
+            height: 239px;
+            width: 87%;
             background-color: black;
-        
             border-radius: 10px;
             border: 
             5px 
@@ -244,7 +248,7 @@
         
         div.projects >
         div.project-image {
-            height: 400px;
+            height: 200px;
             width: 100%;
         
             position: relative;
@@ -261,30 +265,7 @@
         
         }
         
-        div.projects >
-        div.project-description {
-            height: 75px;
-            width: 100%;
-            background-color: gray;
-        
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        
-            text-transform: uppercase;
-            letter-spacing: pt;
-        
-        }
-        
-        div.projects >
-        div.project-description >
-        h3 {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
+      
         
         div.projects >
         div.project-description >
@@ -326,7 +307,7 @@
             width: 150px;
             padding: 15px 25px;
             background-color: gray;
-        
+            cursor: pointer;
             color: white;
         
             font-family: "Oswald";
@@ -339,6 +320,38 @@
             white;
         }
         
+        .buttonAni {
+        border-color: white;
+        border-radius: 0;
+        color: black;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        -webkit-transition: color 150ms ease-in-out;
+        transition: color 150ms ease-in-out;
+      }
+      .buttonAni:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+        width: 0;
+        height: 100%;
+        background:black;
+
+        z-index: -1;
+        -webkit-transition: width 150ms ease-in-out;
+        transition: width 150ms ease-in-out;
+      }
+      .buttonAni:hover {
+        color: #fff;
+      }
+      .buttonAni:hover:after {
+        width: 110%;
+      }
         
         @media only screen and (max-width: 600px) {
             section#project {
@@ -437,9 +450,11 @@
             }
         
         }
-        /*  BANNER SECTION CSS END*/
-        
-        /* FOOTER SECTION BEGIN */
+ 
+.toggleThis {
+    display: none;
+}
+
         footer#footer-section {
             height: auto;
             width: 100%;
@@ -483,9 +498,7 @@
 <!-- NAVBAR -->
     <nav id="navbar">
         <div class="container">
-            <div class="logo-container">
-                <img id="self-photo" src="https://assets.codepen.io/4865050/mepuft.jpg" width="5%">
-            </div>
+           
             <div class="navigation-container">
                 <ul class="navigation-list">
                     <li class="navigation-list">
@@ -507,16 +520,11 @@
     <section id="welcome-section">
         <div class="container">
             <header id="welcome-header">
-                <div>
-                                         <br></br>
  <!-- PHOTO HEADER -->
               <div class="photo-header">
-                
-              <img id="self-photo" src="https://assets.codepen.io/4865050/mepuft.jpg" width="15%"></div>     
+              <img id="self-photo" src="https://assets.codepen.io/4865050/mepuft.jpg">   
                 <h1>Alexandria Shea</h1>
                 <p class="big">Design | Code | Create</p>
-                      
-                    </div>
                 </div>                
             </header>
         </div>
@@ -541,7 +549,7 @@
                         <div class="project-description">
                             <h3 class="project-title">
                                 <span class="overlay gold">|</span>
-                                    London Couture Boutique, Website
+                                    Boutique Website
                                 <span class="overlay gold">|</span>
                             </h3>
                         </div>
@@ -573,7 +581,7 @@
                             </h3>
                         </div>
                     </div>
-                    <div class="projects">
+                    <div class="projects toggleThis">
                         <div class="project-image">
                             <img src="https://assets.codepen.io/4865050/poleportfolio.jpg">
                         </div>
@@ -586,7 +594,7 @@
                             </h3>
                         </div>
                     </div>
-                   <div class="projects">
+                   <div class="projects toggleThis">
                         <div class="project-image">
                             <img src="https://assets.codepen.io/4865050/sumolympicportfolio.jpg" alt="london couture boutique website">
                         </div>
@@ -599,48 +607,9 @@
                             </h3>
                         </div>
                     </div>
-              <div class="projects">
-                        <div class="project-image">
-                            <img src="">
-                        </div>
-                        <a href="#" class="project-overlay"></a>
-                        <div class="project-description">
-                            <h3 class="project-title">
-                                <span class="overlay gold">|</span>
-                                    Product Landing Page
-                                <span class="overlay gold">|</span>
-                            </h3>
-                        </div>
-                    </div>
-              <div class="projects">
-                        <div class="project-image">
-                            <img src="">
-                        </div>
-                        <a href="#" class="project-overlay"></a>
-                        <div class="project-description">
-                            <h3 class="project-title">
-                                <span class="overlay gold">|</span>
-                                    Product Landing Page
-                                <span class="overlay gold">|</span>
-                            </h3>
-                        </div>
-                    </div>
-              <div class="projects">
-                        <div class="project-image">
-                            <img src="">
-                        </div>
-                        <a href="#" class="project-overlay"></a>
-                        <div class="project-description">
-                            <h3 class="project-title">
-                                <span class="overlay gold">|</span>
-                                    Product Landing Page
-                                <span class="overlay gold">|</span>
-                            </h3>
-                        </div>
-                    </div>
             <div class="projects-button">
                 <div class="button-wrapper">
-                    <button type="button">Show All ></button>
+                    <button type="button" class="buttonAni">Show All ></button>
                 </div>
             </div>
         </div>
@@ -649,28 +618,9 @@
         <div class="container">
             <header id="banner-header">
                 <div class="text-wrapper">
-                                         <br></br>
-                    
-                    <h1>Like what you see?</h1>
-                    <p class="big">Let's work together.</p>
+                    <p class="big2 pulsate"><a href="411alexandria@gmail.com?subject=You're Hired!&body=When can you start?">Let's work together!</a></p>
                 </div>                
-                                  </header><br></br>
-            <div class="socials-container">
-                <ul class="socials">
-                    
-                    <li class="socials-items">
-                       <a href="#" target="_blank">
-                            <span class="socials-logos"><i class="fas fa-envelope"></i>&nbsp;e-mail</span>  
-                        </a>
-                    </li>
-                    <li class="socials-items">
-                        <a href="#" target="_blank">
-                            <span class="socials-logos"><i class="fas fa-phone-square"></i>&nbsp;Call me</span>      
-                        </a>
-
-                    </li>
-                </ul>
-            </div>
+                                   </header>
         </div>
     </section>
     <footer id="footer-section">
@@ -681,5 +631,21 @@
             </div>
         </div>
     </footer>
+    <script
+  src="http://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+  crossorigin="anonymous"></script>
+    
+    <script>
+        $(".buttonAni").click(function(){
+            $(".toggleThis").toggle();
+                
+            if($(".toggleThis").is(":visible")){
+                    $(".buttonAni").text("Show Less >");
+            }else{
+                $(".buttonAni").text("Show More >");
+            };
+        }); //click function
+    </script>
 </body>
 </html>
