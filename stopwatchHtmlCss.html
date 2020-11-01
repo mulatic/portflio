@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>HTML/CSS Stopwatch</h1>
+    </head>
+    <body>
+        <style>
+            * {margin: 0; padding: 0;}
+
+h1 {
+	text-align: center;
+	color: #000000;
+}			
+
+body{
+	background-color:rgba(120, 146, 161, 0.63);
+}
+
+.container {
+	margin-top: 100px;
+	text-align: center;
+    
+}
+
+.timer {
+	padding: 10px;
+	background-color: rgba(95, 95, 95, 0.541);
+	overflow: hidden;
+	display: inline-block;
+    height: 300px;
+    width: 300px;
+	border: solid 0px #000000;
+	border-radius: 50%;
+	position: relative;
+	-webkit-box-shadow: #000000 2px 4px 3px 1px;
+}
+
+.cell {
+	/*Should only display 1 digit. Hence height = line height of .numbers
+	and width = width of .numbers* - hide overflow for final effect*/
+	width: 0.60em;
+	height: 40px;
+	font-size: 30px;
+	overflow: hidden;
+	position: relative;
+	float: left;
+    top: 50%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+}
+
+.numbers {
+	width: 0.60em;
+	line-height: 40px;
+	font-family: digital, arial, verdana;
+	text-align: center;
+	color: #000
+	
+	position: absolute;
+	
+	
+	/*Glow to the text*/
+	text-shadow: -1px 0 0px rgb(0, 0, 0);
+}
+
+/*Styles for the controls*/
+#timer_controls {
+	margin-top: 5px;
+}
+#timer_controls label {
+	cursor: pointer;
+	padding: 5px 10px;
+	background: #05d2f7a6;
+	font-family: arial, verdana, tahoma;
+	font-size: 11px;
+	border-radius: 3px 3px 3px 3px;
+	box-shadow: #000000 1px 2px 2px 1px;
+}
+input[name="controls"] {display: none;}
+
+/*Control code*/
+#stop:checked~.timer .numbers {animation-play-state: paused;}
+#start:checked~.timer .numbers {animation-play-state: running;}
+#reset:checked~.timer .numbers {animation: none;}
+
+.moveten {
+	/*The digits move but dont look good. We will use steps now
+	10 digits = 10 steps. You can now see the digits swapping instead of 
+	moving pixel-by-pixel*/
+	animation: moveten 1s steps(10, end) infinite;
+	/*By default animation should be paused*/
+	animation-play-state: paused;
+}
+.movesix {
+	animation: movesix 1s steps(6, end) infinite;
+	animation-play-state: paused;
+}
+
+/*Now we need to sync the animation speed with time speed*/
+/*One second per digit. 10 digits. Hence 10s*/
+.second {animation-duration: 10s;}
+.tensecond {animation-duration: 60s;} /*60 times .second*/
+
+.milisecond {animation-duration: 1s;} /*1/10th of .second*/
+.tenmilisecond {animation-duration: 0.1s;}
+.hundredmilisecond {animation-duration: 0.01s;}
+
+.minute {animation-duration: 600s;} /*60 times .second*/
+.tenminute {animation-duration: 3600s;} /*60 times .minute*/
+
+.hour {animation-duration: 36000s;} /*60 times .minute*/
+.tenhour {animation-duration: 360000s;} /*10 times .hour*/
+
+
+@keyframes moveten {
+	0% {top: 0;}
+	100% {top: -400px;} /* height (40px) x #digits (10) =  to move digits to top position*/
+}
+
+@keyframes movesix {
+	0% {top: 0;}
+	100% {top: -240px;} /* height (40px) x #digits (6) = 240px*/
+}
+
+        </style>
+        <div class="container">
+            <input id="start" name="controls" type="radio" />
+	<input id="stop" name="controls" type="radio" />
+	<input id="reset" name="controls" type="radio" />
+	<div class="timer">
+		<div class="cell">
+			<div class="numbers tenhour moveten">0 1 2 3 4 5 6 7 8 9</div>
+		</div>
+		<div class="cell">
+			<div class="numbers hour moveten">0 1 2 3 4 5 6 7 8 9</div>
+		</div>
+		<div class="cell divider"><div class="numbers">:</div></div>
+		<div class="cell">
+			<div class="numbers tenminute movesix">0 1 2 3 4 5 6</div>
+		</div>
+		<div class="cell">
+			<div class="numbers minute moveten">0 1 2 3 4 5 6 7 8 9</div>
+		</div>
+		<div class="cell divider"><div class="numbers">:</div></div>
+		<div class="cell">
+			<div class="numbers tensecond movesix">0 1 2 3 4 5 6</div>
+		</div>
+		<div class="cell">
+			<div class="numbers second moveten">0 1 2 3 4 5 6 7 8 9</div>
+		</div>
+		<div class="cell divider"><div class="numbers">:</div></div>
+		<div class="cell">
+			<div class="numbers milisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+		</div>
+		<div class="cell">
+			<div class="numbers tenmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+		</div>
+		<div class="cell">
+			<div class="numbers hundredmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+		</div>
+    </div>
+    <!-- Lables for the controls -->
+	<div id="timer_controls">
+		<label for="start">Start</label>
+		<label for="stop">Stop</label>
+		<label for="reset">Reset</label>
+	</div>
+</div>
+
+</body>
+</html>
