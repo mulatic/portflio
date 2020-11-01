@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+    font-family: 'baloo 2', cursive;
+    background-color: ffffff;
+    font-size: 20px;
+    
+  
+  }
+  
+  #header-img {
+    width: 30%;
+    grid-column: 1;
+    align-self: center;
+    
+  }
+  
+  header {
+    position: fixed;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding-top: 5px;
+  }
+  
+  #nav-bar {
+    grid-column: 2;
+    align-self: center;
+    justify-self: right;
+    display: flex;
+    margin-right: 0px;
+  }
+  
+  .nav-link {
+    text-decoration: inherit;
+    color: inherit;
+    margin: 5px;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 650px;
+    position: relative;
+    top: 40px;
+    z-index: 0;
+  }
+  
+  h2 {
+    text-align: center;
+    padding-top: 10%;
+  }
+  
+  #form {
+    display: grid;
+    grid-template-columns: 2fr .5fr;
+    grid-gap: 0px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  
+  .video-section {
+    padding-top: 10%;
+    text-align: center;
+  }
+  
+  #choose {
+    text-align: center;
+  }
+  
+  .btn, #submit {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 0px 20px;
+    cursor: pointer;  
+  }
+  
+  .price {
+    text-align: center;
+    font-size: 44px;
+    color: red;
+  }
+  
+  .products {
+    display: grid;
+  }
+  footer {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    padding-bottom: 0px;
+  }
+  
+  #footer-nav {
+    display: flex;
+    grid-gap: 10px;
+  }
+  
+  footer p {
+    font-size: 85%;
+    color: gray;
+    margin-bottom: 10px;
+  }
+  
+  .poles {
+    text-align: center;
+    float: center;
+  }
+  
+  @media only screen and (min-width: 768px) {
+      /* tablets and desktop */
+  }
+  
+  @media only screen and (max-width: 767px) {
+      /* phones */
+  }
+  
+  @media only screen and (max-width: 767px) and (orientation: portrait) {
+      /* portrait phones */
+  }
+
+        </style>
+    </head>
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+
+<head>
+  <title id="title">Product Landing Page</title>
+</head>
+
+<body>
+  <header id="header">
+    <img id="header-img" src="https://us.123rf.com/450wm/kolesnikov90/kolesnikov901805/kolesnikov90180500166/100785860-stock-vector-vector-silhouette-of-girl-and-pole-on-a-white-background-pole-dance-illustration-.jpg?ver=6" alt:"pole dance silhouette">
+    <nav id="nav-bar">
+      <a href="#spinner" class="nav-link"> Spinner Poles </a> |
+      <a href="#stationary" class="nav-link">Stationary Poles</a> |
+      <a href="#choose" class="nav-link">How do I choose?</a>
+    </nav>
+  </header>
+  
+  <main>
+    <h2>Find your pole-fect fit.</h2>
+    <form id="form" action="email-submit.php" method="get">
+        <input type="email" name="email" placeholder="enter your email address" id="email" required></input>
+        <input type="submit" id="submit" value="Send me info!" class="button">
+      </form>
+  
+    <section id="choose">
+     <iframe class="video-section" name="choose" id="video" width="560" height="315" src="https://www.youtube.com/embed/z9mqY3Yk8ag" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </section>
+  
+ 
+        <div class="products">
+          <h2 name="spinner" id="spinner">Spinner Poles</h2>
+        </div>
+        <div class="poles">
+          <p class="price">$299+</p>
+        
+          <button class="btn">select</button></div>
+      </section>
+        <div class="products">
+          <h2 name="stationary" id="stationary">Stationary Poles </h2>
+        </div>
+        <div class="poles">
+          <p class="price">$179+</p>
+         
+        <button class="btn">select</button></div>
+      </section>
+    </article>
+  
+  </main>
+  </main>
+  
+  <footer>
+    <nav id="footer-nav">
+      <a href="" class="nav-link">Terms</a>
+      <a href="" class="nav-link">FAQ</a>
+      <a href="" class="nav-link">Contact</a>
+    </nav>
+    <p>Copyright 2020, A. Shea</p>
+  </footer>
+</body>
+</html>
