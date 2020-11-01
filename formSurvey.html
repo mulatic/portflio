@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<!-- start-->
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Bellota' rel='stylesheet'>
+<!-- CSS start-->   
+    <style>
+        body {
+    background: url("https://images.freeimages.com/images/large-previews/2a7/polly-background-1631651.jpg");
+    z-index: -1;
+    font-family: bellota;
+    font-size: 1rem;
+    font-weight: 200px;
+    line-height: 20px;
+    color: #000000;
+    margin: auto;
+  
+}
+
+
+ 
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+input, button, select, textarea {
+    margin: 5;
+    font-family: inherit;
+    font-size: inherit;
+    line-height:inherit;
+}
+  .center-text {
+      text-align: center;
+      font-family: Bellota;
+      color: #ffffff;
+  }
+
+        
+
+
+  #description {
+      font-style: oblique;
+      line-height: 0px;
+      font-weight: 20px;
+      
+  }  
+
+
+.input {
+    margin: 0 auto .25em auto;
+    padding: 0.25rem;
+    text-align: center;
+    }
+
+#dropdown {
+    min-width: 100%;
+    max-width: 100%;
+   
+}
+
+input {
+    min-width: 95%;
+ 
+}
+
+textarea {
+    min-width: 95%;
+}
+
+.formation  {
+    display: inline-block;
+    width: 75%;
+    height: 2.375rem;
+    padding: .375rem .75rem;
+    color: #636e69;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: 1px solid #636e69;
+    border-radius: 0.25rem;
+    transition: border-color 0.05s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.formation:focus {
+    border-color: #ffffff;
+    outline: 0;
+    box-shadow: 0px 0px 5px #2bd828;
+   
+}
+
+
+.submit {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: green;
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+}
+
+
+button:hover {
+    background-color: #1c68d2;
+}
+
+.formdiv
+{
+    display: block;
+    text-align: center;
+}
+form
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    background-color: rgba(12, 100, 125, 0.6);
+}  
+
+
+label {
+  display: flex;
+   align-items:center;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+    </style>
+    <!-- CSS end-->
+</head>
+<body>
+<header>
+    <h1 id="title" class="center-text">The Survey Survey</h1>
+    <p id="description" class="center-text">A survey for the sake of making a survey</p>
+</header>
+<!-- form -->
+<div class="formdiv">
+    <form id="survey-form">
+        <fieldset id="fieldset">
+            <!-- name, email, number -->    
+            <div class="input">
+                <label id="name-label" for="name">Name</label>
+      <input type="text" name="name" id="name" class="formation" placeholder="Enter your name" required>
+    </div>
+    <div class="input">
+      <label id="email-label" for="email">Email</label>
+      <input type="email" name="email" id="email" class="formation" placeholder="email@domain.com" required>
+    </div>
+    <div class="input">
+      <label id="number-label" for="number">Phone Number</label>
+      <input type="number" name="number" id="number" class="formation" min="1111111111" max="9999999999" placeholder="(555) 555-5555">
+    </div>
+  <!-- dropdown menu -->
+    <div class="input">
+      <label for="dropdown">Hey...</label>
+        <select id="dropdown" class="formation">
+         <option value="Arnold">Arnold!</option>
+         <option value="Jude">Jude</option>
+         <option value="Nirvana">Wait! I got a new complaint</option>
+         <option value="Fat Albert">Hey, Hey, it's Fat Albert!</option>
+        </select>
+      </label>
+    </div>
+
+  <!-- text box -->                        
+  <div class="input">
+  <label for="rhyme">
+    <p>Type 5 words, separated by commas, that rhyme with "arbitrary."</p></label>
+    <textarea class="formation" id="rhyme" name="rhyme" placeholder="word1, word2, word3, etc..."></textarea>
+  </div>
+  <!-- radio buttons -->
+  <div class="input">
+    <label class="input" for="question">Are you taking a survey right now?</label>
+  </div>
+   <div class="input">
+     <label for="yes">Yes</label>
+     <input type="radio" id="yes" name="maybe" class="formation" value="yes" checked>
+     <label for="no">No
+   </label>
+  <input type="radio" id="no" name="maybe" class="formation" value="no">
+</div> 
+  <div class="input">
+    <label for="checkbox">
+      <p>Select all that apply:</p></label>
+  </div>
+  <div class="input">
+    <label for="picklesyum">I like pickles</label><input type="checkbox" class="formation" name="random" value="picklesyum" id="picklesyum"></div>
+  <div class="input">
+    <label for="picklesew">I hate pickles</label><input type="checkbox" class="formation" name="random" value="picklesew" id="picklesew"></div>
+    <div class="input">
+      <label for="dogs">I prefer dogs over cats</label><input type="checkbox" class="formation" name="random" value="dogs" id="dogs"></div>
+    <div class="input">
+      <label for="cats">I prefer cats over dogs</label><input type="checkbox" class="formation" name="random" value="cats" id="cats"></div>
+    <div class="input">
+      <label for="turtles">I like turtles</label><input type="checkbox" class="formation" name="random" value="turtles" id="turtles"></div>
+    <div class="input">
+      <lable for="energy">I am quite energetic</label><input type="checkbox" class="formation" name="random" value="energy" id="energy"></div>
+    <div class="input">
+      <label for="nap">I could nap</label><input type="checkbox" class="formation" name="random" value="nap" id="nap"></div>
+  <div class="input">
+    <button id="submit" type="submit" class="submit">Submit</button>
+  </div>
+  </fieldset>
+  </form>
+  </div>
+  </body>
+</html>
