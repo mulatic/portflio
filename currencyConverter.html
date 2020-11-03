@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="syle.css">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background: linear-gradient(#000000, #ffffff);
+        font-family: 'Muli', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .test {
+        border-style: solid #000;
+        background-color: #fff;
+        border-radius: 0%;
+        box-shadow: 10px 18px 8px -3px rgba(0, 0, 0, 0.842);
+        padding: 40px 40px 20px 40px;
+
+    }
+
+    .currency {
+        display: flex;
+        align-items: center;
+    }
+
+    .currency select {
+        background: transparent;
+        color: #fff;
+        background-color: #000; /* original used img */
+    }
+
+    .currency input {
+        box-shadow: 2px 7px 5px 0px rgba(0, 0, 0, 0.842);
+        border: none;
+        background: transparent;
+        font-size: 22px;
+        text-align: right;
+    }
+
+    .middle {
+        color: #f59300;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .middle button {
+        background-color: #fff;
+        border: 2px solid #000000;
+        border-radius: 50%;
+        cursor: pointer;
+        color: #f59300;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 30px;
+        transform: rotate(90deg);
+    }
+
+    .middle button:active {
+        transform: rotate(90deg);
+    }
+
+    .middle .rate {
+        background-color: #fff;
+        border: 2px solid #000000;
+        border-radius: 50px;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        margin: 30px 15px 30px 25px;
+    }
+
+    select:focus, input:focus, button:focus {
+        outline: 0;
+    }
+</style>
+<body>
+    <div class="test">
+    <div class="container">
+        <div class="currency">
+            <select id="fromCurrency">
+                <option value="AED">AED</option>
+                <option value="ARS">ARS</option>
+                <option value="AUD">AUD</option>
+                <option value="BGN">BGN</option>
+                <option value="BRL">BRL</option>
+                <option value="BSD">BSD</option>
+                <option value="CAD">CAD</option>
+                <option value="CHF">CHF</option>
+                <option value="CLP">CLP</option>
+                <option value="CNY">CNY</option>
+                <option value="COP">COP</option>
+                <option value="CZK">CZK</option>
+                <option value="DKK">DKK</option>
+                <option value="DOP">DOP</option>
+                <option value="EGP">EGP</option>
+                <option value="EUR">EUR</option>
+                <option value="FJD">FJD</option>
+                <option value="GBP">GBP</option>
+                <option value="GTQ">GTQ</option>
+                <option value="HKD">HKD</option>
+                <option value="HRK">HRK</option>
+                <option value="HUF">HUF</option>
+                <option value="IDR">IDR</option>
+                <option value="ILS">ILS</option>
+                <option value="INR">INR</option>
+                <option value="ISK">ISK</option>
+                <option value="JPY">JPY</option>
+                <option value="KRW">KRW</option>
+                <option value="KZT">KZT</option>
+                <option value="MXN">MXN</option>
+                <option value="MYR">MYR</option>
+                <option value="NOK">NOK</option>
+                <option value="NZD">NZD</option>
+                <option value="PAB">PAB</option>
+                <option value="PEN">PEN</option>
+                <option value="PHP">PHP</option>
+                <option value="PKR">PKR</option>
+                <option value="PLN">PLN</option>
+                <option value="PYG">PYG</option>
+                <option value="RON">RON</option>
+                <option value="RUB">RUB</option>
+                <option value="SAR">SAR</option>
+                <option value="SEK">SEK</option>
+                <option value="SGD">SGD</option>
+                <option value="THB">THB</option>
+                <option value="TRY">TRY</option>
+                <option value="TWD">TWD</option>
+                <option value="UAH">UAH</option>
+                <option value="USD" selected>USD</option>
+                <option value="UYU">UYU</option>
+                <option value="VND">VND</option>
+                <option value="ZAR">ZAR</option>
+            </select>
+            <input type="number" id="fromAmount" placeholder="0" value=1 /> </div>
+        </div>
+        <div class="middle">
+            <button id="exchange">
+                <i class="rate" id="rate"></i>
+            </button>
+            <div class="rate" id="rateID"></div>
+        </div>
+        <div class="currency">
+            <select id="toCurrency">
+            <option value="AED">AED</option>
+            <option value="ARS">ARS</option>
+            <option value="AUD">AUD</option>
+            <option value="BGN">BGN</option>
+            <option value="BRL">BRL</option>
+            <option value="BSD">BSD</option>
+            <option value="CAD">CAD</option>
+            <option value="CHF">CHF</option>
+            <option value="CLP">CLP</option>
+            <option value="CNY">CNY</option>
+            <option value="COP">COP</option>
+            <option value="CZK">CZK</option>
+            <option value="DKK">DKK</option>
+            <option value="DOP">DOP</option>
+            <option value="EGP">EGP</option>
+            <option value="EUR">EUR</option>
+            <option value="FJD">FJD</option>
+            <option value="GBP">GBP</option>
+            <option value="GTQ">GTQ</option>
+            <option value="HKD">HKD</option>
+            <option value="HRK">HRK</option>
+            <option value="HUF">HUF</option>
+            <option value="IDR">IDR</option>
+            <option value="ILS">ILS</option>
+            <option value="INR">INR</option>
+            <option value="ISK">ISK</option>
+            <option value="JPY">JPY</option>
+            <option value="KRW">KRW</option>
+            <option value="KZT">KZT</option>
+            <option value="MXN">MXN</option>
+            <option value="MYR">MYR</option>
+            <option value="NOK">NOK</option>
+            <option value="NZD">NZD</option>
+            <option value="PAB">PAB</option>
+            <option value="PEN">PEN</option>
+            <option value="PHP">PHP</option>
+            <option value="PKR">PKR</option>
+            <option value="PLN">PLN</option>
+            <option value="PYG">PYG</option>
+            <option value="RON">RON</option>
+            <option value="RUB">RUB</option>
+            <option value="SAR" selected>SAR</option>
+            <option value="SEK">SEK</option>
+            <option value="SGD">SGD</option>
+            <option value="THB">THB</option>
+            <option value="TRY">TRY</option>
+            <option value="TWD">TWD</option>
+            <option value="UAH">UAH</option>
+            <option value="USD">USD</option>
+            <option value="UYU">UYU</option>
+            <option value="VND">VND</option>
+            <option value="ZAR">ZAR</option>
+        </select>
+        <input type="number" id="toAmount" placeholder="0" />
+    </div>
+    </div>
+    <!--JAVASCRIPT -->
+    <script>
+
+        const fromCurrencyE1 = document.getElementById("fromCurrency");
+        const fromAmountE1 = document.getElementById("fromAmount");
+        const toCurrencyE1 = document.getElementById("toCurrency");
+        const toAmountE1 = document.getElementById("toAmount");
+        const rateE1 = document.getElementById("rate");
+        const exchange = document.getElementById("exchange")
+
+        fromCurrencyE1.addEventListener("change", calculate);
+        fromAmountE1.addEventListener("input", calculate);
+        toCurrencyE1.addEventListener("change", calculate);
+        toAmountE1.addEventListener("input", calculate);
+
+        exchange.addEventListener("click", () => {
+            const temp = fromCurrencyE1.value;
+            fromCurrencyE1.value = toCurrencyE1.value;
+            toCurrencyE1.value = temp;
+            calculate();
+        });
+
+        function calculate() {
+            const fromCurrency = fromCurrencyE1.value;
+            const toCurrency = toCurrencyE1.value;
+
+            fetch("https://api.exchangerate-api.com/v4/latest/${fromCurrency}")
+                .then(res => res.json())
+                .then(res => {
+                    const rate = res.rates[toCurrency];
+                    rateE1.innerText = "1 ${fromCurrency} = ${toCurrency"}"
+                    toAmountE1.value = {fromAmountE1.value * rate).toFixed(2);
+                })
+                }
+
+                calculate();        
+
+    </script>
+    </body>
+
+</html>
