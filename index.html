@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,21 +11,21 @@
             margin: 0;
             padding: 0;
         }
-        
+
         html,
         body {
-        width: 100%;
-        height: 100%;
+            width: 100%;
+            height: 100%;
         }
-        
+
         .container {
             padding: 20px 40px;
         }
-        
+
         body {
             font-family: "Oswald", sans-serif;
         }
-                
+
         .navigation-list a {
             font-family: "Oswald";
             font-size: 1.2em;
@@ -34,19 +35,19 @@
             text-decoration: none;
             text-transform: lowercase;
         }
-        
+
         h1 {
             font-family: "Oswald";
             font-weight: 600;
             font-size: 3rem;
         }
-        
+
         h2 {
             font-family: "Oswald";
             font-weight: 600;
             font-size: 2rem;
         }
-        
+
         h3 {
             font-family: "Oswald";
             font-size: 0.9em;
@@ -54,65 +55,69 @@
             padding: 5px;
             text-align: center;
         }
-        
+
         p {
             font-family: "Oswald";
             font-size: 14pt;
         }
-        
+
         .big {
             font-size: 20pt;
             margin-top: 5rem;
         }
-        
+
         .big2 {
             font-size: 40px;
             cursor: pointer;
-            
+
         }
 
         .big2 a:hover {
             color: grey;
         }
+
         .pulsate {
-    -webkit-animation: pulsate 1.25s ease-out;
-    -webkit-animation-iteration-count: infinite; 
-    opacity: 0.5;
-}
-@-webkit-keyframes pulsate {
-    0% { 
-        opacity: 0.5;
-    }
-    50% { 
-        opacity: 1.0;
-    }
-    100% { 
-        opacity: 0.5;
-    }
-}
+            -webkit-animation: pulsate 1.25s ease-out;
+            -webkit-animation-iteration-count: infinite;
+            opacity: 0.5;
+        }
+
+        @-webkit-keyframes pulsate {
+            0% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 1.0;
+            }
+
+            100% {
+                opacity: 0.5;
+            }
+        }
+
         a {
             text-decoration: none;
             color: black;
         }
+
         span.overlay {
             font-weight: 400;
             font-size: 20pt;
         }
-        
+
         .gold {
-            color: rgba(
-                780,
-                412,
-                7,
-                3
-            );
+            color: rgba(780,
+                    412,
+                    7,
+                    3);
         }
 
 
-        
-       
+
+
         /* DEFAULT CSS END */
-        
+
         /* NAVIGATION CSS BEGIN */
         nav#navbar {
             width: 100%;
@@ -120,44 +125,40 @@
             position: fixed;
             bottom: 0;
             left: 0;
-        
+
             background-color: black;
         }
-                
-        div.navigation-container > 
-        ul.navigation-list {
+
+        div.navigation-container>ul.navigation-list {
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
         }
-        
+
         /* NAVIGATION CSS END */
-        
-        
-        
-        section#welcome-section >
-        div.container {
+
+
+
+        section#welcome-section>div.container {
             padding: 0;
-        
+
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-        
+
             height: 100%;
         }
-        
+
         header#welcome-header {
             text-align: center;
             flex-direction: inherit;
             justify-content: inherit;
             align-items: inherit;
         }
-        
+
         @media only screen and (max-width: 600px) {
-            header#welcome-header > 
-            div.text-wrapper >
-            p {
+            header#welcome-header>div.text-wrapper>p {
                 margin-top: 15px
             }
         }
@@ -165,8 +166,9 @@
         @media only screen and (min-width: 600px) and (max-width: 1024px) {
             div.projects-wrapper {
                 margin-right: 75px;
-                margin-left: 75px; 
-                padding-top: 50px;           }
+                margin-left: 75px;
+                padding-top: 50px;
+            }
         }
 
         @media only screen and (min-width: 1024px) {
@@ -175,50 +177,50 @@
                 margin-left: 150px;
             }
         }
-        
+
         @media only screen and (min-width: 600px) {
             .big2 {
-               font-size: 60px;   
+                font-size: 60px;
             }
         }
+
         @media only screen and (min-width: 600px) {
             #navbar {
                 width: 100%;
                 top: 0px;
                 height: 4.5rem;
-           
+
             }
         }
 
         #self-photo {
-    border-radius: 100%;
-    width: 50%;
-    max-width: 200px;
-    margin-top: 0px;        
-        
+            border-radius: 100%;
+            width: 50%;
+            max-width: 200px;
+            margin-top: 0px;
+
         }
-        
-           /* WELCOME SECTION CSS END */
-        
+
+        /* WELCOME SECTION CSS END */
+
         /* PROJECTS SECTION CSS BEGIN */
         section#projects {
-            min-height:50vh;
+            min-height: 50vh;
             background-color: black;
             color: white;
         }
-        
-        section#project >
-        div.container {
+
+        section#project>div.container {
             padding: 0;
-        
+
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-        
+
             height: 100%;
         }
-        
+
         header#projects-header {
             text-align: center;
             display: inherit;
@@ -226,168 +228,158 @@
             justify-content: inherit;
             align-items: inherit;
         }
-        
+
         div.projects-wrapper {
-             display: flex;
+            display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-evenly;
             align-items: center;
         }
-        
+
         div.projects {
             height: 239px;
             width: 87%;
             background-color: black;
             border-radius: 10px;
-            border: 
-            5px 
-            solid 
-            white;
+            border:
+                5px solid white;
             margin: 25px 15px;
             position: relative;
             overflow: hidden;
             max-width: 300px;
         }
-        
-        div.projects >
-        div.project-image {
+
+        div.projects>div.project-image {
             height: 200px;
             width: 100%;
-        
+
             position: relative;
             overflow: hidden;
         }
-        
-        div.project-image >
-        img {
+
+        div.project-image>img {
             position: absolute;
             width: 100%;
             height: 100%;
-        
+
             object-fit: cover;
-        
+
         }
-        
-      
-        
-        div.projects >
-        div.project-description >
-        h3 > 
-        span.overlay {
+
+
+
+        div.projects>div.project-description>h3>span.overlay {
             display: none;
         }
-        
-        div.projects >
-        a.project-overlay {
+
+        div.projects>a.project-overlay {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            
+
             width: 100%;
             height: 100%;
         }
-        
-        a.project-overlay:hover + div.project-description h3 span.overlay{
+
+        a.project-overlay:hover+div.project-description h3 span.overlay {
             display: inline;
             line-height: .5;
         }
-        
-        
+
+
         div.projects-button {
             padding: 50px 0;
-        
+
             width: 100%;
-        
+
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        
-        div.button-wrapper >
-        button {
+
+        div.button-wrapper>button {
             width: 150px;
             padding: 15px 25px;
             background-color: gray;
             cursor: pointer;
             color: white;
-        
+
             font-family: "Oswald";
             font-weight: 500;
             text-transform: uppercase;
-        
-            border:
-            2px
-            solid
-            white;
-        }
-        
-        .buttonAni {
-        border-color: white;
-        border-radius: 0;
-        color: black;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-        -webkit-transition: color 150ms ease-in-out;
-        transition: color 150ms ease-in-out;
-      }
-      .buttonAni:after {
-        content: '';
-        position: absolute;
-        display: block;
-        top: 0;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-                transform: translateX(-50%);
-        width: 0;
-        height: 100%;
-        background:black;
 
-        z-index: -1;
-        -webkit-transition: width 150ms ease-in-out;
-        transition: width 150ms ease-in-out;
-      }
-      .buttonAni:hover {
-        color: #fff;
-      }
-      .buttonAni:hover:after {
-        width: 110%;
-      }
-        
+            border:
+                2px solid white;
+        }
+
+        .buttonAni {
+            border-color: white;
+            border-radius: 0;
+            color: black;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            -webkit-transition: color 150ms ease-in-out;
+            transition: color 150ms ease-in-out;
+        }
+
+        .buttonAni:after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            width: 0;
+            height: 100%;
+            background: black;
+
+            z-index: -1;
+            -webkit-transition: width 150ms ease-in-out;
+            transition: width 150ms ease-in-out;
+        }
+
+        .buttonAni:hover {
+            color: #fff;
+        }
+
+        .buttonAni:hover:after {
+            width: 110%;
+        }
+
         @media only screen and (max-width: 600px) {
             section#project {
                 padding-top: 50px;
             }
-        
-            header#projects-header >
-            div.text-wrapper > 
-            p {
+
+            header#projects-header>div.text-wrapper>p {
                 margin-top: 25px
             }
         }
+
         /* PROJECTS SECTION CSS END */
-        
+
         /* BANNER SECTION CSS BEGIN */
-        
+
         section#banner-section {
             height: 90vh;
         }
-        
-        section#banner-section >
-        div.container {
+
+        section#banner-section>div.container {
             padding: 0;
-        
+
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-        
+
             height: 100%;
         }
-        
+
         header#banner-header {
             text-align: center;
             display: inherit;
@@ -395,114 +387,107 @@
             justify-content: inherit;
             align-items: inherit;
         }
-        
+
         div.socials-container {
             margin: 25px 0;
             padding: 5px 0;
         }
-        
+
         ul.socials {
             list-style: none;
-        
+
             display: flex;
             justify-content: center;
             align-items: center;
-        
+
             flex-wrap: wrap;
         }
-        
-        li.socials-items >
-        a {
+
+        li.socials-items>a {
             font-size: 20pt;
             font-family: "Oswald";
             font-weight: 500;
             letter-spacing: 0pt;
-        
+
             margin: 0px 15px;
             color: black;
         }
-        
+
         @media only screen and (max-width: 600px) {
             section#banner-section {
                 padding-top: 50px;
             }
-        
-            header#banner-header >
-            div.text-wrapper > 
-            p {
+
+            header#banner-header>div.text-wrapper>p {
                 margin-top: 25px
             }
-        
+
             ul.socials {
                 list-style: none;
-            
+
                 display: flex;
                 flex-direction: column;
-        
+
                 justify-content: center;
                 align-items: center;
-            
+
             }
-        
+
             li.socials-items {
                 font-size: 20pt;
                 font-family: "Oswald";
                 font-weight: 500;
-            
+
                 margin: 0px 15px;
                 padding: 5px 0px;
             }
-        
+
         }
- 
-.toggleThis {
-    display: none;
-}
+
+        .toggleThis {
+            display: none;
+        }
 
         footer#footer-section {
             height: auto;
             width: 100%;
             background-color: black;
             color: white;
-        
-            border-top: 
-            2px
-            solid
-            red;
-        
+
+            border-top:
+                2px solid red;
+
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        
-        footer#footer-section >
-        div.container {
+
+        footer#footer-section>div.container {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-        
+
             width: 100%;
         }
-        
-        div.container > 
-        div.text-wrapper {
+
+        div.container>div.text-wrapper {
             display: flex;
             flex-direction: row;
-        
+
             justify-content: space-between;
             align-items: center;
-        
+
             width: 100%;
         }
-        
-     </style>    
+    </style>
 </head>
+
 <body>
-<!-- NAVBAR -->
+    <!-- NAVBAR -->
     <nav id="navbar">
         <div class="container">
-           
+
             <div class="navigation-container">
                 <ul class="navigation-list">
                     <li class="navigation-list">
@@ -524,170 +509,183 @@
     <section id="welcome-section">
         <div class="container">
             <header id="welcome-header">
- <!-- PHOTO HEADER -->
-              <div class="photo-header">
-              <img id="self-photo" src="images/mepuft.jpg">   
-                <h1>Alexandria Shea</h1>
-                <p class="big">Design | Code | Create</p>
-                </div>                
+                <!-- PHOTO HEADER -->
+                <div class="photo-header">
+                    <img id="self-photo" src="images/mepuft.jpg">
+                    <h1>Alexandria Shea</h1>
+                    <p class="big">Design | Code | Create</p>
+                </div>
             </header>
         </div>
     </section>
-  <!--PORTFOLIO CONTENT --> 
+    <!--PORTFOLIO CONTENT -->
     <section id="projects">
         <div class="container">
             <header id="projects-header">
                 <div class="text-wrapper">
-                                         <BR/>                             
+                    <BR />
                     <p class="big">WORK SAMPLES</p>
-                </div>                
+                </div>
             </header>
             <div class="projects-wrapper project-tile">
-                    <div class="projects">
-                        <div class="project-image">
-                            <img src="images/lcbthumbnail.jpg" alt="lcbthumbnail">
-                        </div>
-                        <a href="londonCouture.html" class="project-overlay"></a>
-                        <div class="project-description">
-                            <h3 class="project-title">
-                                <span class="overlay gold">|</span>
-                                    Online Boutique
-                                <span class="overlay gold">|</span>
-                            </h3>
-                        </div>
+
+                <div class="projects">
+                    <div class="project-image">
+                        <img src="images/jsMatrixPic.jpg">
                     </div>
-                    <div class="projects">
-                        <div class="project-image">
-                            <img src="images/jsMatrixPic.jpg">
-                        </div>
-                        <a href="stopwatchHtmlCssMatrix.html" class="project-overlay"></a>
-                        <div class="project-description">
-                            <h3 class="project-title">
-                                <span class="overlay gold">|</span>
-                                    Stopwatch (exposed code/Matrix)
-                                <span class="overlay gold">|</span>
-                            </h3>
-                        </div>
+                    <a href="stopwatchHtmlCssMatrix.html" class="project-overlay"></a>
+                    <div class="project-description">
+                        <h3 class="project-title">
+                            <span class="overlay gold">|</span>
+                            Stopwatch (exposed code/Matrix)
+                            <span class="overlay gold">|</span>
+                        </h3>
                     </div>
-                    <div class="projects">
-                        <div class="project-image">
-                            <img src="images/surveySurveyPic.jpg">
-                        </div>
-                        <a href="formSurvey.html" class="project-overlay"></a>
-                        <div class="project-description">
-                            <h3 class="project-title">
-                                <span class="overlay gold">|</span>
-                                    Survey Form
-                                <span class="overlay gold">|</span>
-                            </h3>
-                        </div>
+                </div>
+
+
+                <div class="projects">
+                    <div class="project-image">
+                        <img src="images/currencyCalcPlaceholderPic.jpg">
                     </div>
-                    <div class="projects">
-                        <div class="project-image">
-                           <img src="images/jsTechPic.jpg"
-                             alt="project-image">
-                        </div>
-                        <a href="jsTechnicalDocument.html" class="project-overlay"></a>
-                        <div class="project-description">
-                            <h3 class="project-title">
-                                <span class="overlay gold">|</span>
-                                   JS Technical Documentation
-                                <span class="overlay gold">|</span>
-                            </h3>
-                        </div>
+                    <a href="currencyConverter.html" class="project-overlay"></a>
+                    <div class="project-description">
+                        <h3 class="project-title">
+                            <span class="overlay gold">|</span>
+                            Currency Converter
+                            <span class="overlay gold">|</span>
+                        </h3>
                     </div>
-                    <div class="projects">
-                        <div class="project-image">
-                            <img src="images/countDownPic2.jpg">
-                        </div>
-                        <a href="jsTimer.html" class="project-overlay"></a>
-                        <div class="project-description">
-                            <h3 class="project-title">
-                                <span class="overlay gold">|</span>
-                                    JS Timer
-                                <span class="overlay gold">|</span>
-                            </h3>
-                        </div>
+                </div>
+
+                <div class="projects">
+                    <div class="project-image">
+                        <img src="images/surveySurveyPic.jpg">
                     </div>
-                    
-                    <div class="projects">
-                        <div class="project-image">
-                            <img src="images/ticTacToePic.jpg">
-                        </div>
-                        <a href="ticTacToeTest.html" class="project-overlay"></a>
-                        <div class="project-description">
-                            <h3 class="project-title">
-                                <span class="overlay gold">|</span>
-                                    Tic Tac Toe Game
-                                <span class="overlay gold">|</span>
-                            </h3>
-                        </div>
+                    <a href="formSurvey.html" class="project-overlay"></a>
+                    <div class="project-description">
+                        <h3 class="project-title">
+                            <span class="overlay gold">|</span>
+                            Survey Form
+                            <span class="overlay gold">|</span>
+                        </h3>
                     </div>
-                    <div class="projects toggleThis">
-                        <div class="project-image">
-                            <img src="images/landingPagePic.jpg">
-                        </div>
-                        <a href="productLandingPage.html" class="project-overlay"></a>
-                        <div class="project-description">
-                            <h3 class="project-title">
-                                <span class="overlay gold">|</span>
-                                    Product Landing Page
-                                <span class="overlay gold">|</span>
-                            </h3>
-                        </div>
+                </div>
+
+                <div class="projects">
+                    <div class="project-image">
+                        <img src="images/ticTacToePic.jpg">
                     </div>
-                   <div class="projects toggleThis">
-                        <div class="project-image">
-                            <img src="images/tributePagePic.jpg">
-                        </div>
-                        <a href="tributePage.html" class="project-overlay"></a>
-                        <div class="project-description">
-                            <h3 class="project-title">
-                                <span class="overlay gold">|</span>
-                                    Tribute Page
-                                <span class="overlay gold">|</span>
-                            </h3>
-                        </div>
+                    <a href="ticTacToeTest.html" class="project-overlay"></a>
+                    <div class="project-description">
+                        <h3 class="project-title">
+                            <span class="overlay gold">|</span>
+                            Tic Tac Toe Game
+                            <span class="overlay gold">|</span>
+                        </h3>
                     </div>
-                    <div class="projects toggleThis">
-                        <div class="project-image">
-                            <img src="images/jsStopwatchPic.jpg">
-                        </div>
-                        <a href="stopwatchHtmlCss.html" class="project-overlay"></a>
-                        <div class="project-description">
-                            <h3 class="project-title">
-                                <span class="overlay gold">|</span>
-                                    Stopwatch
-                                <span class="overlay gold">|</span>
-                            </h3>
-                        </div>
+                </div>
+
+                <div class="projects">
+                    <div class="project-image">
+                        <img src="images/jsStopwatchPic.jpg">
                     </div>
-                    <div class="projects toggleThis">
-                        <div class="project-image">
-                            <img src="images/currencyCalcPlaceholderPic.jpg">
-                        </div>
-                        <a href="currencyConverter.html" class="project-overlay"></a>
-                        <div class="project-description">
-                            <h3 class="project-title">
-                                <span class="overlay gold">|</span>
-                                    Currency Converter (in  progress)
-                                <span class="overlay gold">|</span>
-                            </h3>
-                        </div>
+                    <a href="stopwatchHtmlCss.html" class="project-overlay"></a>
+                    <div class="project-description">
+                        <h3 class="project-title">
+                            <span class="overlay gold">|</span>
+                            Stopwatch
+                            <span class="overlay gold">|</span>
+                        </h3>
                     </div>
-            <div class="projects-button">
-                <div class="button-wrapper">
-                    <button type="button" class="buttonAni">Show All ></button>
+                </div>
+
+                <div class="projects">
+                    <div class="project-image">
+                        <img src="images/landingPagePic.jpg">
+                    </div>
+                    <a href="productLandingPage.html" class="project-overlay"></a>
+                    <div class="project-description">
+                        <h3 class="project-title">
+                            <span class="overlay gold">|</span>
+                            Product Landing Page
+                            <span class="overlay gold">|</span>
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="projects toggleThis">
+                    <div class="project-image">
+                        <img src="images/countDownPic2.jpg">
+                    </div>
+                    <a href="jsTimer.html" class="project-overlay"></a>
+                    <div class="project-description">
+                        <h3 class="project-title">
+                            <span class="overlay gold">|</span>
+                            Countdown Clock
+                            <span class="overlay gold">|</span>
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="projects toggleThis">
+                    <div class="project-image">
+                        <img src="images/jsTechPic.jpg" alt="project-image">
+                    </div>
+                    <a href="jsTechnicalDocument.html" class="project-overlay"></a>
+                    <div class="project-description">
+                        <h3 class="project-title">
+                            <span class="overlay gold">|</span>
+                            JS Technical Documentation
+                            <span class="overlay gold">|</span>
+                        </h3>
+                    </div>
+                </div>
+
+
+                <div class="projects toggleThis">
+                    <div class="project-image">
+                        <img src="images/lcbthumbnail.jpg" alt="lcbthumbnail">
+                    </div>
+                    <a href="londonCouture.html" class="project-overlay"></a>
+                    <div class="project-description">
+                        <h3 class="project-title">
+                            <span class="overlay gold">|</span>
+                            Online Boutique
+                            <span class="overlay gold">|</span>
+                        </h3>
+                    </div>
+                </div>
+                <div class="projects toggleThis">
+                    <div class="project-image">
+                        <img src="images/tributePagePic.jpg">
+                    </div>
+                    <a href="tributePage.html" class="project-overlay"></a>
+                    <div class="project-description">
+                        <h3 class="project-title">
+                            <span class="overlay gold">|</span>
+                            Tribute Page
+                            <span class="overlay gold">|</span>
+                        </h3>
+                    </div>
+                </div>
+
+
+                <div class="projects-button">
+                    <div class="button-wrapper">
+                        <button type="button" class="buttonAni">Show All ></button>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
     <section id="banner-section">
         <div class="container">
             <div id="banner-header">
                 <div class="text-wrapper">
-                    <p class="big2 pulsate"><a href="mailto:411alexandria@gmail.com?subject=You're Hired!&body=When can you start?">Let's work together ></a></p>
-                </div>                
+                    <p class="big2 pulsate"><a
+                            href="mailto:411alexandria@gmail.com?subject=You're Hired!&body=When can you start?">Let's
+                            work together ></a></p>
+                </div>
             </div>
         </div>
     </section>
@@ -700,17 +698,18 @@
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   
-  <script>
-    $(".buttonAni").click(function(){
-        $(".toggleThis").toggle();
-        if($(".toggleThis").is(":visible")){
+
+    <script>
+        $(".buttonAni").click(function () {
+            $(".toggleThis").toggle();
+            if ($(".toggleThis").is(":visible")) {
                 $(".buttonAni").text("Show Less >");
-        }
-        else{
-            $(".buttonAni").text("Show More >");
-        };
-    }); //click func
-</script>
+            }
+            else {
+                $(".buttonAni").text("Show More >");
+            };
+        }); //click function
+    </script>
 </body>
+
 </html>
