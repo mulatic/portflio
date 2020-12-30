@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>divTable</title>
+   <style type="text/css">
+
+   .table {
+      display: table;
+      width: 95vw;
+      height: 100vh;
+      text-align: center;
+   }
+
+   .row {
+      display: table-row;
+   }
+
+   .cell {
+      display: table-cell;
+      border: 1px solid black;
+   }
+
+   #header {
+      width: 100%;
+      height: 10vh;
+   }
+
+   #leftNav {
+      float:left;
+      width: 20%;
+      height: 100%;
+   }
+   #content {
+     float: left;
+      width: 54%;
+      height: 100%;
+   }
+
+   #rightSide {
+      float: left;
+      width: 20vw;
+      height: 100%;
+   }
+
+   #footer {
+      width: 100%;
+      height: 10vh;
+   }
+     </style>
+     </head>
+     <body>
+
+      <!-- table wrap -->
+      <div class="table">
+         <!-- header -->  
+         <div class="row">
+            <div class="cell" id="header">Header</div>
+         </div>
+         <!-- middle --> 
+         <div class="row">
+            <div class="cell" id="leftNav">1</div>
+            <div class="cell" id="content">2</div>
+            <div class="cell" id="rightSide">3</div>
+         </div>
+         <!-- footer -->
+         <div class="row">
+            <div class="cell" id="footer">Footer</div>
+         </div>
+      </div>
+
+
+
+     </body>
+     </html>
