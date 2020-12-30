@@ -6,10 +6,9 @@
         }
         
         body {
-            background:linear-gradient( rgb(0, 0, 0), rgb(212, 206, 179));
-            background-repeat: no-repeat;
+            background-color: grey;
         }
-        #demo {
+        #title {
             margin-top: 5%;
             padding-top: 5%;
             padding-bottom: 5%;
@@ -17,13 +16,13 @@
             
         }
         #date {
-            padding-top: 40%;
-            padding-bottom: 40%;
+            padding-top: 25%;
+            padding-bottom: 25%;
             font-size: 4vh;
         }
 
         .container1 {
-            Margin-top: 40%;
+            Margin-top: 25%;
             margin-right: 10%;
             margin-left: 10%;
             border-radius: 10px 10px 0px 0px;
@@ -35,6 +34,7 @@
         .container2 {
             margin-right: 8%;
             margin-left: 8%;
+            margin-bottom: 40%;
             border-radius: 10px 10px 0px 0px;
             color: #fff;
             background-color: black;
@@ -45,7 +45,7 @@
 <body>
 
 <div class="container1">
-    <div id="demo"></div>
+    <div id="title"></div>
     </div>
 <div class="container2">
     <div id="date"></div>
@@ -75,8 +75,8 @@ switch (new Date().getDay()) {
   case  6:
     day = "Saturday, finally!";
 }
-document.getElementById("demo").innerHTML = "TODAY IS";
-document.getElementById("demo").style.textAlign = "center";
+document.getElementById("title").innerHTML = "TODAY IS";
+document.getElementById("title").style.textAlign = "center";
 document.getElementById("date").innerHTML = day;
 document.getElementById("date").style.textAlign = "center";
 </script>
