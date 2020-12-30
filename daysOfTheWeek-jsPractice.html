@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        html {
+            height: 100%;
+        }
+        
+        body {
+            background:linear-gradient( rgb(0, 0, 0), rgb(212, 206, 179));
+            background-repeat: no-repeat;
+        }
+        #demo {
+            margin-top: 5%;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            font-size: 2vh;
+            
+        }
+        #date {
+            padding-top: 40%;
+            padding-bottom: 40%;
+            font-size: 4vh;
+        }
+
+        .container1 {
+            Margin-top: 40%;
+            margin-right: 10%;
+            margin-left: 10%;
+            border-radius: 10px 10px 0px 0px;
+            background-color: rgb(212, 206, 179);
+            box-shadow: rgba(0, 0, 0, 0.493) 5px 5px 6px 0px;;
+            box-shadow:        inset  0 -10px 10px -10px black;
+        }
+
+        .container2 {
+            margin-right: 8%;
+            margin-left: 8%;
+            border-radius: 10px 10px 0px 0px;
+            color: #fff;
+            background-color: black;
+            box-shadow: rgba(0, 0, 0, 0.493) 5px 5px 6px 0px;;
+            z-index: 1;
+        }
+    </style>
+<body>
+
+<div class="container1">
+    <div id="demo"></div>
+    </div>
+<div class="container2">
+    <div id="date"></div>
+    </div>
+
+<script>
+var day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday, funday!";
+    break;
+  case 1:
+    day = "oh... Monday.";
+    break;
+  case 2:
+    day = "Taco Tuesday :P";
+    break;
+  case 3:
+    day = "HumpdaaAAAYy!";
+    break;
+  case 4:
+    day = "just Thursday.";
+    break;
+  case 5:
+    day = "Friyaaay!";
+    break;
+  case  6:
+    day = "Saturday, finally!";
+}
+document.getElementById("demo").innerHTML = "TODAY IS";
+document.getElementById("demo").style.textAlign = "center";
+document.getElementById("date").innerHTML = day;
+document.getElementById("date").style.textAlign = "center";
+</script>
+
+</body>
+</html>
